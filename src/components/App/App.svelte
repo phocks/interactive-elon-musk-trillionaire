@@ -27,4 +27,12 @@
 </Scrollyteller>
 
 <style lang="scss">
+  @media (min-width: 1000px) {
+    :global {
+      .content--left {
+        width: 100%;
+        max-width: calc(50vw - 80px) !important;
+      }
+    }
+  }
 </style>

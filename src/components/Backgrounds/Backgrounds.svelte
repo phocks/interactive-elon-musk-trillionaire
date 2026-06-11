@@ -1,29 +1,91 @@
 <script lang="ts">
-  import Elon_Musk_1 from "./(1) Elon.png";
-  import Larry_Page_2 from "./(2) Larry Page.png";
-  import Sergey_Brin_3 from "./(3) Sergey Brin.png";
-  import Jeff_Bezos_4 from "./(4) Jeff Bezos.png";
-  import Gina_Rinehart_5 from "./(5) Gina Rinehart.png";
+  // --- Billionaires ---
+
+  //Mobile
+  import Elon_Musk_1 from "./billionaires/(1) Elon.png";
+  import Larry_Page_2 from "./billionaires/(2) Larry.png";
+  import Sergey_Brin_3 from "./billionaires/(3) Sergey.png";
+  import Jeff_Bezos_4 from "./billionaires/(4) Jeff.png";
+  import Gina_Rinehart_5 from "./billionaires/(5) Gina.png";
+
+  // Desktop
+  import Elon_Musk_Desktop_1 from "./billionaires/(1) Elon Desktop.png";
+  import Larry_Page_Desktop_2 from "./billionaires/(2) Larry Desktop.png";
+  import Sergey_Brin_Desktop_3 from "./billionaires/(3) Sergey Desktop.png";
+  import Jeff_Bezos_Desktop_4 from "./billionaires/(4) Jeff Desktop.png";
+  import Gina_Rinehart_Desktop_5 from "./billionaires/(5) Gina Desktop.png";
+
+  // --- Budget ---
+  import Metro from "./budget/(1) Metro.png";
+  import SRL from "./budget/(2) SRL.png";
+  import Healthcare from "./budget/(3) Healthcare.png";
+  import Defence from "./budget/(4) Defence.png";
+  import Budget from "./budget/(5) Budget.png";
 
   const { panelName } = $props();
 
   const images = {
-    elonmusk: { image: Elon_Musk_1, altText: "Elon Musk" },
-    larrypage: { image: Larry_Page_2, altText: "Larry Page" },
-    sergeybrin: { image: Sergey_Brin_3, altText: "Sergey Brin" },
-    jeffbezos: { image: Jeff_Bezos_4, altText: "Jeff Bezos" },
-    ginarinehart: { image: Gina_Rinehart_5, altText: "Gina Rinehart" },
+    // Billionaires
+    elonmusk: {
+      mobile: Elon_Musk_1,
+      desktop: Elon_Musk_Desktop_1,
+      altText: "Elon Musk",
+    },
+    larrypage: {
+      mobile: Larry_Page_2,
+      desktop: Larry_Page_Desktop_2,
+      altText: "Larry Page",
+    },
+    sergeybrin: {
+      mobile: Sergey_Brin_3,
+      desktop: Sergey_Brin_Desktop_3,
+      altText: "Sergey Brin",
+    },
+    jeffbezos: {
+      mobile: Jeff_Bezos_4,
+      desktop: Jeff_Bezos_Desktop_4,
+      altText: "Jeff Bezos",
+    },
+    ginarinehart: {
+      mobile: Gina_Rinehart_5,
+      desktop: Gina_Rinehart_Desktop_5,
+      altText: "Gina Rinehart",
+    },
+    // Budget
+    metro: {
+      mobile: Metro,
+      desktop: Metro,
+      altText: "Metro",
+    },
+    srl: {
+      mobile: SRL,
+      desktop: SRL,
+      altText: "SRL",
+    },
+    healthcare: {
+      mobile: Healthcare,
+      desktop: Healthcare,
+      altText: "Healthcare",
+    },
+    defence: {
+      mobile: Defence,
+      desktop: Defence,
+      altText: "Defence",
+    },
+    budget: {
+      mobile: Budget,
+      desktop: Budget,
+      altText: "Budget",
+    },
   };
 </script>
 
 <div class="container">
   <div class="frame">
-    <img class="base" src={Elon_Musk_1} alt={images["elonmusk"].altText} />
-    <img
-      class="overlay"
-      src={images[panelName].image}
-      alt={images[panelName].altText}
-    />
+    <picture>
+      <source media="(min-width: 600px)" srcset={images[panelName].desktop} />
+      <img src={images[panelName].mobile} alt={images[panelName].altText} />
+    </picture>
   </div>
 </div>
 
@@ -40,19 +102,31 @@
     height: 100%;
   }
 
-  img {
+  picture {
     position: absolute;
     inset: 0;
+    display: block;
+  }
+
+  picture img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: top center;
   }
 
-  /* .base {
-    z-index: 1;
+  @media (min-width: 1000px) {
+    .container {
+      padding-inline: 32px;
+    }
+    .frame {
+      width: 50%;
+      transform: translateX(calc(100% + 16px));
+    }
+
+    picture img {
+      object-position: center left;
+      max-width: 700px;
+    }
   }
-  .overlay {
-    z-index: 2;
-  } */
 </style>
