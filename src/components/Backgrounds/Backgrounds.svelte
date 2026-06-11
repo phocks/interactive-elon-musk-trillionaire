@@ -1,4 +1,16 @@
 <script lang="ts">
+  import { fade } from "svelte/transition";
+
+  // Constants
+  const params = new URLSearchParams(window.location.search);
+  const rawFade = params.get("fade");
+  const parsedFade = rawFade ? Number(rawFade) : 0;
+
+  const FADE_DURATION =
+    Number.isFinite(parsedFade) && parsedFade >= 0 ? parsedFade : 0;
+
+  const fadeEnabled = FADE_DURATION > 0;
+
   // --- Billionaires ---
 
   //Mobile
@@ -82,10 +94,25 @@
 
 <div class="container">
   <div class="frame">
-    <picture>
-      <source media="(min-width: 600px)" srcset={images[panelName].desktop} />
-      <img src={images[panelName].mobile} alt={images[panelName].altText} />
-    </picture>
+    {#if fadeEnabled}
+      {#key panelName}
+        <picture
+          in:fade={{ duration: FADE_DURATION }}
+          out:fade={{ delay: FADE_DURATION, duration: FADE_DURATION }}
+        >
+          <source
+            media="(min-width: 600px)"
+            srcset={images[panelName].desktop}
+          />
+          <img src={images[panelName].mobile} alt={images[panelName].altText} />
+        </picture>
+      {/key}
+    {:else}
+      <picture>
+        <source media="(min-width: 600px)" srcset={images[panelName].desktop} />
+        <img src={images[panelName].mobile} alt={images[panelName].altText} />
+      </picture>
+    {/if}
   </div>
 </div>
 
