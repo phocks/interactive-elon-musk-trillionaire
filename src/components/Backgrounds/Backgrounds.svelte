@@ -186,6 +186,7 @@
     position: absolute;
     inset: 0;
     padding: 18px;
+    min-height: 100dvh
   }
 
   .frame {

@@ -6,7 +6,7 @@
   let backgroundPanelName = $state("elonmusk");
 
   $effect(() => {
-    console.log(backgroundPanelName);
+    // console.log(backgroundPanelName);
   });
 </script>
 
