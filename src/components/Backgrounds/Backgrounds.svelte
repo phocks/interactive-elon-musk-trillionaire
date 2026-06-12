@@ -45,6 +45,24 @@
   import Defence_Desktop from "./Aus Budget measures/Desktop/(5) Defence desktop.png";
   import Budget_Desktop from "./Aus Budget measures/Desktop/(6) Fed Budget desktop.png";
 
+  // All other items
+
+  // Mobile
+  import Ten_Thousand_Households from "./All other items in US dollars/Mobile/(1) 10,000 Households.png";
+  import End_World_Hunger from "./All other items in US dollars/Mobile/(2) End World Hunger.png";
+  import Energy_Transition from "./All other items in US dollars/Mobile/(3) Energy transition.png";
+  import Fund_US_Aid from "./All other items in US dollars/Mobile/(4) Fund US aid.png";
+  import Mission_To_Mars from "./All other items in US dollars/Mobile/(5) Mission to mars.png";
+  import Taiwan_GDP from "./All other items in US dollars/Mobile/(6) Taiwan GDP.png";
+
+  // Desktop
+  import Ten_Thousand_Households_Desktop from "./All other items in US dollars/Desktop/(1) 10,000 Households desktop.png";
+  import End_World_Hunger_Desktop from "./All other items in US dollars/Desktop/(2) End world hunger.png";
+  import Energy_Transition_Desktop from "./All other items in US dollars/Desktop/(3) Energy Tranision.png";
+  import Fund_US_Aid_Desktop from "./All other items in US dollars/Desktop/(4)Fund US aid.png";
+  import Mission_To_Mars_Desktop from "./All other items in US dollars/Desktop/(5)Mission to Mars.png";
+  import Taiwan_GDP_Desktop from "./All other items in US dollars/Desktop/(6) Taiawan.png";
+
   const { panelName } = $props();
 
   const images = {
@@ -104,6 +122,37 @@
       mobile: Budget,
       desktop: Budget_Desktop,
       altText: "Budget",
+    },
+    // All other items
+    tenthousandhouseholds: {
+      mobile: Ten_Thousand_Households,
+      desktop: Ten_Thousand_Households_Desktop,
+      altText: "Ten Thousand Households",
+    },
+    endworldhunger: {
+      mobile: End_World_Hunger,
+      desktop: End_World_Hunger_Desktop,
+      altText: "End World Hunger",
+    },
+    energytransition: {
+      mobile: Energy_Transition,
+      desktop: Energy_Transition_Desktop,
+      altText: "Energy Transition",
+    },
+    fundusaid: {
+      mobile: Fund_US_Aid,
+      desktop: Fund_US_Aid_Desktop,
+      altText: "Fund US Aid",
+    },
+    missiontomars: {
+      mobile: Mission_To_Mars,
+      desktop: Mission_To_Mars_Desktop,
+      altText: "Mission to Mars",
+    },
+    taiwangdp: {
+      mobile: Taiwan_GDP,
+      desktop: Taiwan_GDP_Desktop,
+      altText: "Taian GDP",
     },
   };
 </script>
