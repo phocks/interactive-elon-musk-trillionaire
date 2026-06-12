@@ -31,7 +31,7 @@
     :global {
       .content--left {
         width: 100%;
-        max-width: calc(50vw - 80px) !important;
+        max-width: calc(50vw - 48px) !important;
       }
     }
   }

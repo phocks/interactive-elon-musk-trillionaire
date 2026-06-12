@@ -14,25 +14,36 @@
   // --- Billionaires ---
 
   //Mobile
-  import Elon_Musk_1 from "./billionaires/(1) Elon.png";
-  import Larry_Page_2 from "./billionaires/(2) Larry.png";
-  import Sergey_Brin_3 from "./billionaires/(3) Sergey.png";
-  import Jeff_Bezos_4 from "./billionaires/(4) Jeff.png";
-  import Gina_Rinehart_5 from "./billionaires/(5) Gina.png";
+  import Elon_Musk_1 from "./Billionaires graphic/Mobile/(1) Elon.png";
+  import Larry_Page_2 from "./Billionaires graphic/Mobile/(2) Larry.png";
+  import Sergey_Brin_3 from "./Billionaires graphic/Mobile/(3) Sergey.png";
+  import Jeff_Bezos_4 from "./Billionaires graphic/Mobile/(4) Jeff.png";
+  import Gina_Rinehart_5 from "./Billionaires graphic/Mobile/(5) Gina.png";
 
   // Desktop
-  import Elon_Musk_Desktop_1 from "./billionaires/(1) Elon Desktop.png";
-  import Larry_Page_Desktop_2 from "./billionaires/(2) Larry Desktop.png";
-  import Sergey_Brin_Desktop_3 from "./billionaires/(3) Sergey Desktop.png";
-  import Jeff_Bezos_Desktop_4 from "./billionaires/(4) Jeff Desktop.png";
-  import Gina_Rinehart_Desktop_5 from "./billionaires/(5) Gina Desktop.png";
+  import Elon_Musk_Desktop_1 from "./Billionaires graphic/Desktop/(1) Elon Desktop.png";
+  import Larry_Page_Desktop_2 from "./Billionaires graphic/Desktop/(2) Larry Desktop.png";
+  import Sergey_Brin_Desktop_3 from "./Billionaires graphic/Desktop/(3) Serg desktop.png";
+  import Jeff_Bezos_Desktop_4 from "./Billionaires graphic/Desktop/(4) Jeff Desktop.png";
+  import Gina_Rinehart_Desktop_5 from "./Billionaires graphic/Desktop/(5) Gina Desktop.png";
 
   // --- Budget ---
-  import Metro from "./budget/(1) Metro.png";
-  import SRL from "./budget/(2) SRL.png";
-  import Healthcare from "./budget/(3) Healthcare.png";
-  import Defence from "./budget/(4) Defence.png";
-  import Budget from "./budget/(5) Budget.png";
+
+  //Mobile
+  import One_Trillion from "./Aus Budget measures/Mobile/(1) One Tillion.png";
+  import Metro from "./Aus Budget measures/Mobile/(2) Syd Metro.png";
+  import Rail_Loop from "./Aus Budget measures/Mobile/(3) Rail loop.png";
+  import Healthcare from "./Aus Budget measures/Mobile/(4) Health.png";
+  import Defence from "./Aus Budget measures/Mobile/(5) Defence.png";
+  import Budget from "./Aus Budget measures/Mobile/(6) Fed Budget.png";
+
+  // Desktop
+  import One_Trillion_Desktop from "./Aus Budget measures/Desktop/(1) 1 tillion desktop.png";
+  import Metro_Desktop from "./Aus Budget measures/Desktop/(2) Syd Metro desktop.png";
+  import Rail_Loop_Desktop from "./Aus Budget measures/Desktop/(3) Rail loop desktop.png";
+  import Healthcare_Desktop from "./Aus Budget measures/Desktop/(4) Health desktop.png";
+  import Defence_Desktop from "./Aus Budget measures/Desktop/(5) Defence desktop.png";
+  import Budget_Desktop from "./Aus Budget measures/Desktop/(6) Fed Budget desktop.png";
 
   const { panelName } = $props();
 
@@ -64,29 +75,34 @@
       altText: "Gina Rinehart",
     },
     // Budget
+    onetrillion: {
+      mobile: One_Trillion,
+      desktop: One_Trillion_Desktop,
+      altText: "One Trillion",
+    },
     metro: {
       mobile: Metro,
-      desktop: Metro,
+      desktop: Metro_Desktop,
       altText: "Metro",
     },
-    srl: {
-      mobile: SRL,
-      desktop: SRL,
+    railloop: {
+      mobile: Rail_Loop,
+      desktop: Rail_Loop_Desktop,
       altText: "SRL",
     },
     healthcare: {
       mobile: Healthcare,
-      desktop: Healthcare,
+      desktop: Healthcare_Desktop,
       altText: "Healthcare",
     },
     defence: {
       mobile: Defence,
-      desktop: Defence,
+      desktop: Defence_Desktop,
       altText: "Defence",
     },
     budget: {
       mobile: Budget,
-      desktop: Budget,
+      desktop: Budget_Desktop,
       altText: "Budget",
     },
   };
