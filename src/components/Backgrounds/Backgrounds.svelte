@@ -13,7 +13,7 @@
 
   // --- Billionaires ---
 
-  //Mobile
+  // Mobile
   import Elon_Musk_1 from "./Billionaires graphic/Mobile/(1) Elon.png";
   import Larry_Page_2 from "./Billionaires graphic/Mobile/(2) Larry.png";
   import Sergey_Brin_3 from "./Billionaires graphic/Mobile/(3) Sergey.png";
@@ -29,7 +29,7 @@
 
   // --- Budget ---
 
-  //Mobile
+  // Mobile
   import One_Trillion from "./Aus Budget measures/Mobile/(1) One Tillion.png";
   import Metro from "./Aus Budget measures/Mobile/(2) Syd Metro.png";
   import Rail_Loop from "./Aus Budget measures/Mobile/(3) Rail loop.png";
