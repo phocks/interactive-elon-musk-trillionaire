@@ -191,7 +191,7 @@
   .frame {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   picture {
@@ -202,10 +202,10 @@
 
   picture img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: contain;
     object-position: top center;
-    padding-bottom: 80px; // rough buffer for the clipped area
+    /* padding-bottom: 80px; // rough buffer for the clipped area */
   }
 
   @media (min-width: 1000px) {
