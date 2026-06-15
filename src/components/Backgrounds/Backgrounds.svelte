@@ -185,13 +185,13 @@
   .container {
     position: absolute;
     inset: 0;
-    padding: 18px;
+    /* padding: 18px; */
   }
 
   .frame {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 
   picture {
@@ -202,10 +202,11 @@
 
   picture img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: contain;
     object-position: top center;
     /* padding-bottom: 80px; // rough buffer for the clipped area */
+    padding: 18px;
   }
 
   @media (min-width: 1000px) {
