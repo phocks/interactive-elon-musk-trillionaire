@@ -185,7 +185,7 @@
   .container {
     position: absolute;
     inset: 0;
-    /* padding: 18px; */
+    padding: 18px;
   }
 
   .frame {
@@ -205,8 +205,7 @@
     height: 100%;
     object-fit: contain;
     object-position: top center;
-    /* padding-bottom: 80px; // rough buffer for the clipped area */
-    padding: 18px;
+    padding-bottom: 80px; // rough buffer for the clipped area
   }
 
   @media (min-width: 1000px) {
