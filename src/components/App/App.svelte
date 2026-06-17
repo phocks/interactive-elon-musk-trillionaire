@@ -4,10 +4,6 @@
 
   let { panels } = $props();
   let backgroundPanelName = $state("elonmusk");
-
-  $effect(() => {
-    // console.log(backgroundPanelName);
-  });
 </script>
 
 <Scrollyteller
